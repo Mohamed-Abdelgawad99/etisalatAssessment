@@ -32,8 +32,18 @@ jobs:
 
       - name: setup-chromedriver
         uses: nanasess/setup-chromedriver@v2.2.2
+
+      - name: Create target directory
+        run: mkdir -p /home/runner/work/etisalatAssessment/etisalatAssessment/webApplicationTask/target/surefire-reports
             
 
       - name: Run Selenium Tests
         run: mvn clean test
         working-directory: ./webApplicationTask
+
+      - name: Upload Surefire Reports
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: surefire-reports
+          path: target/surefire-reports/
