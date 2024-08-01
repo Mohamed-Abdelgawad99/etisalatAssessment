@@ -35,14 +35,7 @@ public class StepDefinitions {
         driver = new ChromeDriver();
     }
 
-//    public static String capture(WebDriver driver) throws IOException, IOException {
-//        File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-//        File dest = new File("src/../ScreeShots/"+System.currentTimeMillis()+".png");
-//        String errFilepath =dest.getAbsolutePath();
-//        FileUtils.copyFile(scrFile,dest);
-//        return errFilepath;
-//
-//    }
+
 
     @Test(priority = 1)
     public void validateLoIn() {
