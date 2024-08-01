@@ -52,6 +52,7 @@
                 <configuration>
                     <suiteXmlFiles>
                         <suiteXmlFile>./src/test/resources/testng.xml</suiteXmlFile>
+                        <reportsDirectory>target/surefire-reports</reportsDirectory>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
