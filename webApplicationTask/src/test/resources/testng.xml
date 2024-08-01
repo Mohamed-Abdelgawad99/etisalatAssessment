@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Web Application Test Suite">
+
+    <!-- Define your test here -->
+    <test name="Web Application Tests">
+        <classes>
+            <!-- Specify the classes that contain your test methods -->
+            <class name="stepdefinitions.StepDefinitions" />
+        </classes>
+    </test>
+
+</suite>
