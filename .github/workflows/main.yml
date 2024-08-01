@@ -36,5 +36,4 @@ jobs:
           chromedriver-version: 'latest'
 
       - name: Run Selenium Tests
-        run: |
-        ./gradlew clean test
+        run: mvn clean test
