@@ -37,3 +37,10 @@ jobs:
       - name: Run Selenium Tests
         run: mvn clean test
         working-directory: ./webApplicationTask
+
+      - name: Upload Surefire Reports
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: surefire-reports
+          path: target/surefire-reports/
