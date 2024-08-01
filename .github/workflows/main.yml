@@ -32,6 +32,9 @@ jobs:
 
       - name: setup-chromedriver
         uses: nanasess/setup-chromedriver@v2.2.2
+
+      - name: Create target directory
+        run: mkdir -p target/surefire-reports
             
 
       - name: Run Selenium Tests
