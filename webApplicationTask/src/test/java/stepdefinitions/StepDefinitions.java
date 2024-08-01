@@ -30,9 +30,16 @@ public class StepDefinitions {
 
     @BeforeTest
     public static void setUp(){
+        try {
         ExtentSparkReporter spark = new ExtentSparkReporter("target/test-reports/Spart.html");
         extent.attachReporter(spark);
+        System.out.println("Initializing ChromeDriver...");
         driver = new ChromeDriver();
+        System.out.println("ChromeDriver initialized successfully.");
+    } catch (Exception e) {
+        e.printStackTrace();
+        throw new RuntimeException("Setup failed: " + e.getMessage());
+    }
     }
 
 
