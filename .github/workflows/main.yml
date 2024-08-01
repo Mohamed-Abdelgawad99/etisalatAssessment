@@ -14,10 +14,10 @@ jobs:
 
     steps:
       - name: Checkout the code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up JDK 22
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v3
         with:
           distribution: 'temurin'
           java-version: '22'
@@ -30,10 +30,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
-      - name: Set up ChromeDriver
-        uses: nanasess/setup-chromedriver@v1
+      - name: Set up Selenium with ChromeDriver
+        uses: SeleniumHQ/setup-selenium@v2
         with:
-          chrome-version: '127.0.6533.88'
+          browsers: chrome
+          selenium-version: '4.11.0'
 
       - name: Run Selenium Tests
         run: mvn clean test
