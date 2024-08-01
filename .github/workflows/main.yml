@@ -39,7 +39,7 @@ jobs:
 
       - name: Run Selenium Tests
         run: mvn clean test
-        working-directory: ./webApplicationTask
+        working-directory: /home/runner/work/etisalatAssessment/etisalatAssessment/webApplicationTask/target/surefire-reports
 
       - name: Upload Surefire Reports
         if: always()
